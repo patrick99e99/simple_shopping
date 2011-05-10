@@ -1,0 +1,17 @@
+<h1>Welcome to our fancy store!</h1>
+
+<div id="products">
+	
+	<%= render :partial => 'stores/products/listing' %>
+
+</div>
+
+<div id="cart">
+	
+	<div id="cart_top">
+		<img src="images/cart_icon.png" />
+		<%= content_tag :p, pluralize(@cart.cart_items.size, 'Cart Item') %>
+	</div>
+	
+	<%= render :partial => 'stores/cart/listing' %>
+</div>

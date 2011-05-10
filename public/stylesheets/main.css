@@ -1,0 +1,210 @@
+body {
+	background: #000 url('../images/bg1.png') repeat-x;
+	color: #fff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	width: 70%;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+#products {
+	border: 2px solid #507f3b;
+	padding: 10px;
+	background: #4f7248;
+	width: 70%;
+	text-align: center;
+}
+
+#products input[type="submit"] {
+	background: #AAA;
+	color: #000;
+	padding: 10px;
+	border: 1px solid #444;
+	padding: 2px 5px;
+}
+
+#products input[type="submit"]:hover {
+	background: #FFF;
+	color: #333;
+	border: 1px solid #0F0;
+}
+
+#products label {
+	font-size: 12px;
+}
+
+#products select {
+	background: #384c33;
+	color: #fff;
+	margin: 0 0 25px 0;
+}
+
+#products div {
+	display: inline-block;
+	border: none;
+	margin: 0 5px 40px 5px;
+	font-size: 10px;
+}
+
+img {
+	border: 1px solid #444;
+}
+
+#products div:hover {
+	color: #fff;
+}
+
+#cart {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	width: 25%;
+	border: 2px solid #333;
+	background: #000;
+	text-align: center;
+	font-size: 10px;
+}
+
+#cart_listing {
+	max-height: 400px;
+	overflow: auto;
+}
+
+#cart input[type="submit"] {
+	background: #000;
+	border: 1px solid #fff;
+	font-size: 10px;
+	margin: 10px 0 3px 0;
+	padding: 2px 5px;
+	color: #888;
+}
+
+#cart input[type="submit"]:hover {
+	background: #1100aa;
+	color: #fff;
+	border: 1px solid #00F;
+}
+
+#cart_top {
+	background: #000 url('../images/cart_top_slice.png') repeat-x;
+	text-align: left;
+	border-bottom: 1px solid #222;
+}
+
+#cart_top img {
+	border: none;
+}
+
+#cart_top p {
+	float: right;
+	margin: 7px 10px 0 0;
+}
+
+#cart ul {
+	list-style-type: none;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+#cart li {
+	margin: 0;
+	padding: 3px 25px 3px 0px;
+}
+
+#cart li.odd {
+	background: #111;
+}
+
+#cart li.even {
+	background: #000;
+}
+
+#cart form.remove_cart_item {
+	border: none;
+	display: inline;
+}
+
+#cart form.remove_cart_item input[type="submit"] {
+	font-size: 9px;
+	padding: 0;
+	background: transparent;
+	margin: 0 0 0 5px;
+	color: #888;
+	border: none;
+}
+
+#cart form.remove_cart_item input[type="submit"]:hover {
+	color: #fff;
+}
+
+table {
+	border-collapse: collapse;
+	width: 75%;
+	margin: 25px auto;
+}
+
+tr {
+	background: #333;
+}
+
+tr.header {
+	background: #555;	
+}
+
+th, td {
+	border: 1px solid #fff;
+	padding: 5px;
+}
+
+th, td.name {
+	text-align: left;
+}
+
+td {
+	color: #000;
+	text-align: right;
+	background: #aaa;
+}
+
+tr.total, tr.total td {
+	color: #fff;
+	background: #666;
+}
+
+tr.tax, tr.tax td {
+	color: #fff;	
+	background: #999;
+}
+
+tr.tax th, tr.total th {
+	text-align: right;
+	border-right: none;
+}
+
+tr.tax td, tr.total td {
+	border-left: none;
+}
+
+#choices {
+	margin: 0;
+	text-align: center;
+}
+
+#choices a {
+	margin: 0 50px;
+	border: 1px solid #222;
+	background: #555;
+	padding: 10px;
+	color: #aaa;
+	text-decoration: none;
+}
+
+#choices a:hover {
+	color: #fff;
+	border-color: #444;
+	background: #777;
+}

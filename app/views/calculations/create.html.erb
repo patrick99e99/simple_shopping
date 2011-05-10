@@ -1,0 +1,53 @@
+<table>
+	<tr class="header">
+		<th>
+			Item name
+		</th>
+	
+		<th>
+			Item quantity
+		</th>
+	
+		<th>
+			Item price
+		</th>
+		
+		<th>
+			Item total
+		</th>
+	</tr>
+	
+	<%= render :partial => 'row', :collection => @cart.products.uniq, :as => :product %>
+
+	<tr class="tax">
+		<th>
+			Sales Taxes:
+		</th>
+		<td colspan="3">
+			<%= to_dollars(@cart.sales_taxes) %>
+		</td>
+	</tr>
+
+	<tr class="total">
+		<th>
+			Sub-Total:
+		</th>
+		<td colspan="3">
+			<%= to_dollars(@cart.sub_total) %>
+		</td>
+	</tr>
+
+	<tr class="total">
+		<th>
+			Total:
+		</th>
+		<td colspan="3">
+			<%= to_dollars(@cart.total) %>
+		</td>
+	</tr>
+	
+</table>
+
+<div id="choices">
+	<%= link_to "Continue Shopping", store_path %>
+</div>

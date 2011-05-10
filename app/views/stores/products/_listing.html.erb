@@ -1,0 +1,17 @@
+<%- unless @products.blank? -%>
+
+	<%- form_tag :store, :method => :get do -%>
+
+		<%= label_tag :category, "Filter by product type:" %>
+		<%= select_tag :category, options_from_collection_for_select(Category.for_select, :id, :name, @category_id) %>
+		<%= submit_tag "Go!", :id => 'filter_submit', :name => nil %>
+		
+	<%- end -%>
+
+	<%= render :partial => 'stores/products/product', :collection => @products %>
+
+<%- else -%>
+
+	<%= render :partial => 'stores/products/create_products'  -%>
+
+<%- end -%>

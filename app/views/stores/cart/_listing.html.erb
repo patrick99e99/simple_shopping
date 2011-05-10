@@ -1,0 +1,17 @@
+<%- unless @cart.cart_items.blank? %>
+
+	<ul id="cart_listing">
+		<%= render :partial => 'stores/cart/cart_item', :collection => @cart.cart_items %>
+	</ul>
+	
+	<%- form_tag :calculations, :method => :post do -%>
+	
+		<%= submit_tag "Calculate Sales Tax!", :id => 'calculate' %>
+	
+	<%- end -%>
+	
+<%- else -%>
+
+	<p>Cart is empty</p>
+
+<%- end -%>

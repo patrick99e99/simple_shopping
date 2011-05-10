@@ -1,0 +1,13 @@
+<%- content_tag :li, :class => cycle('odd', 'even') do -%>
+	
+	<%= cart_item.product.name %>
+	
+	<%- form_for cart_item, :html => {:method => :delete, :class => 'remove_cart_item'} do %>
+
+		<%= hidden_field_tag :category, @category_id, :id => nil %>
+
+		<%= submit_tag "[x]" %>
+	
+	<%- end -%>
+	
+<%- end -%>

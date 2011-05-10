@@ -1,0 +1,17 @@
+<div class="product" id="product_<%= product.id %>">
+	
+	<%= image_tag "#{product.img}.jpg" %>
+	
+	<%- form_tag :cart_items, :method => :post do -%>
+
+		<p><%= product.name %><br />
+		   <%= to_dollars(product.price) %></p>
+		
+		<%= hidden_field_tag :product_id, product.id, :id => nil %>
+		<%= hidden_field_tag :category, @category_id, :id => nil %>
+
+		<p><%= submit_tag "add to cart", :id => "add_to_cart_#{product.id}" %></p>
+
+	<%- end -%>
+
+</div>

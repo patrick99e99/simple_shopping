@@ -1,0 +1,19 @@
+<tr>
+	
+	<td class="name">
+		<%= product.name %>
+	</td>
+	
+	<td>
+		<%= @cart.quantity_of(product) %>
+	</td>
+
+	<td>
+		<%= to_dollars(product.price_with_tax) %>
+	</td>
+	
+	<td>
+		<%= to_dollars(@cart.total_item_price(product)) %>
+	</td>
+
+</tr>
